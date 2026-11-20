@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guias gratuitos · Chave Pública</title>
+<meta name="description" content="Guias gratuitos do Chave Pública: permissões de token, sites falsos, camadas 2, tokenização e glossário de DeFi, do zero, com fontes.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="icone.svg" type="image/svg+xml">
+<style>
+  :root{
+    --bg:#0A0A12; --bg2:#14112B; --card:#18143A; --line:#2A2456;
+    --ink:#F8FAFC; --muted:#A3A6C8; --lime:#C6FF3D; --violet:#7C5CFF; --cyan:#22D3EE; --red:#F87171;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.62 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%}
+  a{color:var(--cyan);text-underline-offset:3px}
+  a:hover{color:var(--lime)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  header{background:radial-gradient(120% 90% at 50% 0%,#1B1640 0%,var(--bg) 70%);padding:44px 0 28px;border-bottom:1px solid var(--line)}
+  .marca{display:flex;align-items:center;gap:14px}
+  .marca img{width:56px;height:56px;border-radius:14px}
+  .marca b{font-size:22px;letter-spacing:.2px}
+  .marca span{display:block;color:var(--muted);font-size:15px}
+  h1{font-size:32px;line-height:1.2;margin:26px 0 10px}
+  h1 em{font-style:normal;background:linear-gradient(90deg,var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{color:var(--muted);margin:0 0 18px}
+  .selo{display:inline-block;border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--muted);margin:4px 6px 0 0}
+  nav{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin:28px 0}
+  nav b{display:block;margin-bottom:6px}
+  nav ol{margin:0;padding-left:22px}
+  nav li{margin:4px 0}
+  section{padding:10px 0 26px;border-bottom:1px solid var(--line)}
+  h2{font-size:25px;line-height:1.25;margin:30px 0 6px;scroll-margin-top:16px}
+  h2 small{display:block;font-size:14px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--lime);margin-bottom:6px}
+  h3{font-size:19px;margin:24px 0 6px;color:var(--lime)}
+  .video{font-size:15px;color:var(--muted);margin:0 0 14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin:16px 0}
+  .card.alerta{border-color:#5a2a3a;background:#1f1226}
+  .card.alerta b{color:var(--red)}
+  ol.passos{counter-reset:p;list-style:none;padding:0;margin:12px 0}
+  ol.passos>li{counter-increment:p;position:relative;padding:2px 0 14px 50px}
+  ol.passos>li::before{content:counter(p);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:700;color:#0A0A12;background:linear-gradient(135deg,var(--violet),var(--cyan))}
+  ol.passos>li b{display:block}
+  ul{padding-left:22px}
+  li{margin:6px 0}
+  .fonte{font-size:13.5px;color:var(--muted)}
+  sup a{text-decoration:none;font-size:12px}
+  dl{margin:10px 0}
+  dt{font-weight:700;color:var(--lime);margin-top:14px}
+  dd{margin:2px 0 0}
+  .fontes li{font-size:14.5px;color:var(--muted);word-break:break-word}
+  footer{padding:30px 0 50px;color:var(--muted);font-size:14.5px}
+  footer p{margin:6px 0}
+  @media (max-width:520px){ body{font-size:16.5px} h1{font-size:27px} h2{font-size:22px} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="marca">
+      <img src="icone.svg" alt="Logo do Chave Pública: duas chaves com um cadeado no meio" width="56" height="56">
+      <div><b>Chave Pública</b><span>DeFi explicado, do zero.</span></div>
+    </div>
+    <h1>Guias gratuitos de <em>DeFi</em>, passo a passo</h1>
+    <p class="lead">O complemento por escrito dos vídeos do canal: como funcionam as permissões de token, o que dá para conferir antes de assinar, como ler os níveis de uma camada 2 e as perguntas que importam diante de um ativo tokenizado. Tudo com fonte e data.</p>
+    <span class="selo">Gratuito, sem cadastro</span>
+    <span class="selo">Sem venda, sem patrocínio, sem link de afiliado</span>
+    <span class="selo">Atualizado em 20/11/2026</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="card alerta">
+    <b>Conteúdo educativo. Não é recomendação de investimento.</b><br>
+    Os guias explicam mecanismos e mostram onde conferir as coisas. Não dizem o que comprar, vender ou usar. Protocolos, empresas e ferramentas aparecem só como exemplos, nunca como indicação, e o Chave Pública não tem relação comercial com nenhum deles.
+  </div>
+
+  <nav aria-label="Sumário">
+    <b>Neste guia</b>
+    <ol>
+      <li><a href="#antes">Antes de tudo: cinco regras contra golpe</a></li>
+      <li><a href="#permissoes">Permissões de token: como ver e como zerar</a></li>
+      <li><a href="#site-falso">Site falso, contrato verdadeiro: o que conferir antes de assinar</a></li>
+      <li><a href="#camada-2">Camadas 2: como ler os níveis de maturidade</a></li>
+      <li><a href="#tokenizacao">Ativo tokenizado: cinco perguntas para ler a ficha</a></li>
+      <li><a href="#glossario">Glossário do canal</a></li>
+      <li><a href="#fontes">Fontes</a></li>
+    </ol>
+  </nav>
+
+  <section id="antes">
+    <h2><small>Guia 1</small>Antes de tudo: cinco regras contra golpe</h2>
+    <p>Elas valem para qualquer coisa em cripto, e principalmente para as mensagens que chegam depois de um comentário em rede social.</p>
+    <ol class="passos">
+      <li><b>Ninguém de verdade pede a frase de recuperação.</b>
+        A frase de recuperação é a chave mestra da carteira: quem tem as palavras tem acesso a tudo. O ethereum.org e o suporte da MetaMask dizem o mesmo: não se compartilha a frase nem a chave privada, por motivo nenhum, com ninguém.<sup><a href="#f4">[4]</a> <a href="#f23">[23]</a></sup></li>
+      <li><b>O Chave Pública não chama ninguém no privado primeiro.</b>
+        Não vendemos nada, não pedimos dados e não oferecemos ajuda para “recuperar” carteira. As únicas mensagens automáticas do canal respondem a quem escreveu antes: o link desta página, para quem pediu nos comentários, e um aviso fixo para quem manda mensagem. Perfil parecido com o nosso oferecendo qualquer outra coisa não é nosso.</li>
+      <li><b>Link em mensagem que você não pediu não se abre.</b>
+        É uma das orientações da página de golpes do ethereum.org, que também lembra: moderadores de verdade nunca mandam a primeira mensagem.<sup><a href="#f5">[5]</a></sup></li>
+      <li><b>“Especialista em recuperação” de cripto é golpe.</b>
+        O ethereum.org explica que esse tipo de golpe mira justamente quem já perdeu dinheiro, com promessas de recuperar o que saiu. Transação na blockchain não se desfaz.<sup><a href="#f5">[5]</a> <a href="#f4">[4]</a></sup></li>
+      <li><b>Aprovar e assinar também autorizam.</b>
+        O golpe da permissão não precisa da frase de recuperação: ele pede um <i>approve</i> ou uma assinatura de <i>permit</i> para o endereço errado. Os guias 2 e 3 mostram como isso funciona.<sup><a href="#f1">[1]</a> <a href="#f2">[2]</a></sup></li>
+    </ol>
+  </section>
+
+  <section id="permissoes">
+    <h2><small>Guia 2</small>Permissões de token: como ver e como zerar</h2>
+    <p class="video">Vídeo relacionado no canal: “Aprovar não é só clicar: o golpe da permissão no DeFi” (no ar a partir de 27/11/2026).</p>
+
+    <h3>O que é uma permissão</h3>
+    <p>No padrão de tokens ERC-20, a função <i>approve</i> deixa outro endereço, em geral o de um contrato inteligente, gastar um token da sua carteira até um limite. Esse limite se chama <i>allowance</i>. Quem recebe a permissão pode sacar várias vezes, até o valor aprovado.<sup><a href="#f1">[1]</a></sup> É ela que faz a troca numa DEX e o empréstimo funcionarem sem ninguém no meio: na primeira troca de um token, a DEX pede a aprovação daquele token.<sup><a href="#f21">[21]</a></sup></p>
+    <p>Dois detalhes importam. Segundo o ethereum.org, muitos aplicativos pedem permissão ilimitada, para reduzir os pedidos, e essas permissões não têm data de validade.<sup><a href="#f3">[3]</a></sup> E cada aprovação fica registrada na blockchain, dentro do contrato do próprio token, onde qualquer pessoa pode consultar quanto está liberado e para quem.<sup><a href="#f1">[1]</a></sup></p>
+
+    <h3>O caminho, passo a passo</h3>
+    <p>É o roteiro do guia de revogação do ethereum.org,<sup><a href="#f3">[3]</a></sup> explicado do zero.</p>
+    <ol class="passos">
+      <li><b>Abrir uma ferramenta de consulta de permissões.</b>
+        O guia do ethereum.org lista ferramentas que mostram as permissões ligadas a um endereço, como as dos exploradores de blocos Etherscan e Blockscout e os sites Revoke e Unrekt. São exemplos, nunca indicação. O endereço da ferramenta vale ser digitado ou aberto a partir do próprio ethereum.org, e não de um link recebido em mensagem.</li>
+      <li><b>Conectar a carteira na mesma rede.</b>
+        A ferramenta mostra só as permissões da rede escolhida: conectada à rede principal do Ethereum, ela não mostra o que foi aprovado em outra rede. Cada rede usada precisa ser conferida à parte.<sup><a href="#f3">[3]</a></sup></li>
+      <li><b>Ler a lista.</b>
+        Cada linha junta três coisas: o token, o endereço que recebeu a permissão e o limite. “Ilimitado” (<i>unlimited</i>) quer dizer que esse endereço pode gastar todo o saldo daquele token.<sup><a href="#f3">[3]</a> <a href="#f4">[4]</a></sup></li>
+      <li><b>Zerar o que não se usa mais.</b>
+        Zerar é uma nova transação, assinada pela carteira, que grava limite zero no lugar do anterior.<sup><a href="#f1">[1]</a></sup> Como qualquer transação, paga a taxa da rede.<sup><a href="#f3">[3]</a></sup> O ethereum.org lembra que revogar uma permissão de um aplicativo que você ainda usa não causa problema: na próxima vez, ele pede uma nova aprovação.<sup><a href="#f3">[3]</a></sup></li>
+      <li><b>Conferir de novo depois de alguns minutos.</b>
+        O guia do ethereum.org sugere atualizar a ferramenta e conectar de novo para ver se a permissão sumiu da lista.<sup><a href="#f3">[3]</a></sup></li>
+    </ol>
+
+    <div class="card">
+      <b>O que zerar não faz</b>
+      <ul>
+        <li>Não devolve o que já saiu: transação na blockchain não se desfaz. A permissão deixa de valer dali para a frente.<sup><a href="#f4">[4]</a></sup></li>
+        <li>Desconectar a carteira de um site não apaga a permissão. Ela continua registrada no contrato do token até ser zerada.<sup><a href="#f3">[3]</a></sup></li>
+      </ul>
+    </div>
+
+    <h3>E o <i>permit</i>?</h3>
+    <p>O <i>permit</i>, padronizado em 2020 (alguns tokens já o usavam antes), é uma permissão dada só com uma assinatura. Assinar não custa taxa, e qualquer endereço pode levar a assinatura até a rede, inclusive quem a pediu. Cada assinatura traz um prazo de validade (<i>deadline</i>), definido no próprio pedido.<sup><a href="#f2">[2]</a></sup> Enquanto ninguém a envia, ela ainda não é uma permissão registrada; depois de enviada, vira uma permissão como qualquer outra e aparece na lista do passo 3.<sup><a href="#f2">[2]</a> <a href="#f1">[1]</a></sup></p>
+    <p class="fonte">Para dar escala: pelas contas da Scam Sniffer, os sites que levam a pessoa a confirmar permissões maliciosas, como <i>approve</i> e <i>permit</i>, levaram quase US$ 84 milhões em 2025, nas redes compatíveis com o Ethereum (relatório de 03/01/2026, consulta em 16/11/2026). É estimativa mínima de uma empresa privada.<sup><a href="#f8">[8]</a></sup></p>
+  </section>
+
+  <section id="site-falso">
+    <h2><small>Guia 3</small>Site falso, contrato verdadeiro: o que conferir antes de assinar</h2>
+    <p class="video">Vídeo relacionado no canal: “O site falso e o contrato verdadeiro: o caso Across” (vídeo curto, no ar a partir de 29/11/2026).</p>
+
+    <h3>Site e contrato não são a mesma coisa</h3>
+    <p>O contrato inteligente é o programa que roda na blockchain. O site é a vitrine: a interface onde os pedidos aparecem para a carteira assinar.<sup><a href="#f6">[6]</a></sup> E vitrine pode ser trocada. Em 10/11/2026, invasores tomaram o domínio da Across, uma ponte entre blockchains, e, por algumas horas, quem abria o link de sempre caía numa página falsa que pedia permissões. Segundo a Across, citada pela imprensa, os contratos da ponte não foram atingidos: o que mudou foi a vitrine.<sup><a href="#f7">[7]</a></sup></p>
+    <p>A lição do caso: o endereço certo na barra do navegador ajuda, mas não basta. O que decide é o que a carteira está sendo chamada a assinar, e para quem vai a permissão.</p>
+
+    <h3>Quatro perguntas antes de assinar</h3>
+    <ol class="passos">
+      <li><b>Que tipo de pedido é este?</b>
+        Uma transação comum, uma aprovação (<i>approve</i>) ou uma assinatura? As três podem mover tokens: a aprovação e a assinatura de <i>permit</i> autorizam um endereço a gastar.<sup><a href="#f1">[1]</a> <a href="#f2">[2]</a></sup></li>
+      <li><b>Qual token e qual limite?</b>
+        Um pedido de limite ilimitado deixa o endereço levar todo o saldo daquele token.<sup><a href="#f4">[4]</a></sup> O ethereum.org registra que algumas carteiras permitem limitar à mão a quantidade aprovada.<sup><a href="#f3">[3]</a></sup></li>
+      <li><b>Para quem vai a permissão?</b>
+        No golpe, quem recebe não é a DEX: é um endereço controlado por quem montou a página. Ele pode sacar até o limite aprovado.<sup><a href="#f1">[1]</a></sup></li>
+      <li><b>De onde veio o link?</b>
+        Link que chega em mensagem não pedida é o sinal clássico: a página de golpes do ethereum.org orienta a nunca abrir links enviados assim.<sup><a href="#f5">[5]</a></sup></li>
+    </ol>
+  </section>
+
+  <section id="camada-2">
+    <h2><small>Guia 4</small>Camadas 2: como ler os níveis de maturidade</h2>
+    <p class="video">Vídeo relacionado no canal: “Camadas 2: a pista expressa do Ethereum” (no ar a partir de 04/12/2026).</p>
+
+    <h3>O mecanismo em três linhas</h3>
+    <p>Um rollup junta muitas transações fora da rede principal do Ethereum e publica nela os dados compactados e o resultado. A taxa paga à rede principal é dividida entre todo mundo do lote, e por isso cada um paga menos.<sup><a href="#f10">[10]</a></sup> O ethereum.org propõe um teste simples: a camada 2 guarda os dados dela na rede principal do Ethereum? Se guarda, costuma ser chamada de rollup.<sup><a href="#f9">[9]</a></sup> Em troca da taxa menor, muitos rollups ainda pedem alguma confiança em pessoas, e os níveis de maturidade mostram quanta.<sup><a href="#f13">[13]</a></sup></p>
+
+    <h3>Os três níveis, lidos do zero</h3>
+    <ol class="passos">
+      <li><b>Onde ver.</b>
+        O ETHBEAT (antigo L2BEAT) mantém uma página de resumo das camadas 2, com uma aba só de rollups, e mostra o nível de cada um: 0, 1 ou 2 (<i>Stage</i> 0, 1 ou 2, em inglês).<sup><a href="#f14">[14]</a> <a href="#f13">[13]</a></sup></li>
+      <li><b>Nível 0.</b>
+        O projeto ainda é totalmente controlado por poucas mãos. Sozinho, não aponta problema: quer dizer que, por enquanto, a confiança está mais em pessoas do que em código.<sup><a href="#f13">[13]</a></sup></li>
+      <li><b>Nível 1.</b>
+        Meio do caminho. Se uma mudança no código não vier do conselho de segurança, quem não concordar tem pelo menos 7 dias para tirar o dinheiro antes que ela valha.<sup><a href="#f13">[13]</a></sup></li>
+      <li><b>Nível 2.</b>
+        Quem controla é só o código, e o aviso prévio para mudanças sobe para pelo menos 30 dias.<sup><a href="#f13">[13]</a></sup></li>
+      <li><b>O aviso do próprio site.</b>
+        A régua mede maturidade, não segurança, e mesmo um rollup no nível 2 pode ter falhas.<sup><a href="#f13">[13]</a></sup> Na consulta de 16/11/2026, o ETHBEAT listava 23 rollups: 14 no nível 0, 6 no nível 1 e 3 no nível 2.<sup><a href="#f14">[14]</a></sup></li>
+    </ol>
+
+    <div class="card">
+      <b>Outros pontos que aparecem nas fichas</b>
+      <ul>
+        <li><b>Sequenciador:</b> em vários rollups, um único sequenciador decide a ordem das transações. Muitos rollups têm uma porta de emergência, a de mandar a transação direto ao programa do rollup na rede principal; nem todos têm.<sup><a href="#f11">[11]</a> <a href="#f16">[16]</a></sup></li>
+        <li><b>Chave de atualização:</b> a maioria das camadas 2 pode ter o código atualizado, e o ETHBEAT lembra que, em teoria, uma mudança mal-intencionada poderia desviar o dinheiro guardado ali.<sup><a href="#f15">[15]</a></sup></li>
+        <li><b>Prazo de saída:</b> nos rollups otimistas, levar o dinheiro de volta à rede principal espera um prazo de contestação de cerca de 7 dias; nos de conhecimento zero, a prova de validade vem antes e esse prazo não existe.<sup><a href="#f11">[11]</a> <a href="#f12">[12]</a></sup></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="tokenizacao">
+    <h2><small>Guia 5</small>Ativo tokenizado: cinco perguntas para ler a ficha</h2>
+    <p class="video">Vídeo relacionado no canal: “Tokenização: quando o Tesouro americano entra na blockchain” (no ar a partir de 11/12/2026).</p>
+    <p>Tokenizar é registrar numa blockchain a posse de algo que existe fora dela. O token é como a ficha do guarda-volumes: prova a posse, mas não é a mochila. Segundo o ethereum.org, esses tokens não têm valor próprio, refletem o valor do que representam.<sup><a href="#f17">[17]</a></sup> Por isso, diante de qualquer ativo tokenizado, as perguntas são sobre o que está do outro lado.</p>
+    <ol class="passos">
+      <li><b>Quem emite o token?</b>
+        É de quem depende a promessa de que o token corresponde a algo real. Se alguém fora da rede falhar, a solução depende de pessoas e de regras, não só do código.<sup><a href="#f17">[17]</a> <a href="#f19">[19]</a></sup></li>
+      <li><b>Quem guarda o ativo?</b>
+        O custodiante guarda o que está fora da rede. No primeiro fundo tokenizado da BlackRock, citado só como exemplo do mecanismo, o banco BNY Mellon guarda os ativos e a Securitize cria e registra os tokens.<sup><a href="#f20">[20]</a></sup></li>
+      <li><b>Qual registro vale como prova de posse?</b>
+        Nem sempre é a blockchain. No fundo do exemplo, segundo a IOSCO, cada transferência é conferida com um banco de dados fora da rede, e é esse registro de fora que vale como prova oficial.<sup><a href="#f19">[19]</a></sup></li>
+      <li><b>Quem pode ter e para quem pode passar?</b>
+        Há tokens que só circulam entre investidores pré-aprovados.<sup><a href="#f20">[20]</a></sup> O painel rwa.xyz separa o mercado em ativos <i>distribuídos</i>, que podem sair da plataforma e passar de carteira em carteira, e <i>representados</i>, que ficam registrados só dentro dela.<sup><a href="#f18">[18]</a></sup></li>
+      <li><b>Que direitos o token dá?</b>
+        A IOSCO cita tokens de ações que podem ser só uma promessa do emissor, sem os direitos de acionista.<sup><a href="#f19">[19]</a></sup></li>
+    </ol>
+  </section>
+
+  <section id="glossario">
+    <h2><small>Guia 6</small>Glossário do canal</h2>
+    <dl>
+      <dt>Allowance</dt><dd>O limite de uma permissão: quanto um endereço ainda pode gastar de um token da sua carteira.<sup><a href="#f1">[1]</a></sup></dd>
+      <dt>Approve (aprovar)</dt><dd>Função do padrão ERC-20 que dá a outro endereço o direito de gastar um token até um limite. É uma transação e paga taxa.<sup><a href="#f1">[1]</a></sup></dd>
+      <dt>Autocustódia</dt><dd>Quando quem guarda as chaves da carteira é a própria pessoa, e não uma corretora.<sup><a href="#f22">[22]</a></sup></dd>
+      <dt>Blob</dt><dd>Pacote de dados criado pela atualização Dencun (13/03/2024) para os rollups publicarem os seus lotes na rede principal; é apagado depois de cerca de 18 dias.<sup><a href="#f24">[24]</a></sup></dd>
+      <dt>Blockchain</dt><dd>Banco de dados público, compartilhado por muitos computadores e atualizado ao mesmo tempo por todos eles.<sup><a href="#f25">[25]</a></sup></dd>
+      <dt>Camada 2 (layer 2)</dt><dd>Rede construída em cima da rede principal do Ethereum, a camada 1, para tirar trabalho dela.<sup><a href="#f10">[10]</a></sup></dd>
+      <dt>Carteira</dt><dd>Aplicativo que guarda as chaves que dão acesso à conta. As moedas ficam registradas na blockchain, não na carteira.<sup><a href="#f22">[22]</a></sup></dd>
+      <dt>Contrato inteligente</dt><dd>Programa que roda na blockchain e segue as próprias regras sozinho.<sup><a href="#f26">[26]</a></sup></dd>
+      <dt>Custodiante</dt><dd>Quem guarda um ativo em nome de outra pessoa.<sup><a href="#f20">[20]</a></sup></dd>
+      <dt>DEX</dt><dd>Corretora descentralizada: troca uma moeda por outra sem empresa no meio, com uma pool administrada por contrato inteligente do outro lado.<sup><a href="#f21">[21]</a></sup></dd>
+      <dt>Drainer</dt><dd>“Esvaziador”, em inglês: site de golpe que leva a pessoa a confirmar permissões maliciosas.<sup><a href="#f8">[8]</a></sup></dd>
+      <dt>Endereço</dt><dd>O número da conta de uma carteira ou de um contrato na rede.<sup><a href="#f22">[22]</a></sup></dd>
+      <dt>Frase de recuperação</dt><dd>As palavras que abrem a carteira; a chave mestra de tudo o que ela controla.<sup><a href="#f4">[4]</a></sup></dd>
+      <dt>Gás</dt><dd>O nome da taxa de rede no Ethereum.<sup><a href="#f27">[27]</a></sup></dd>
+      <dt>Permit</dt><dd>Permissão dada só com uma assinatura, sem taxa na hora; qualquer endereço pode levá-la até a rede (EIP-2612).<sup><a href="#f2">[2]</a></sup></dd>
+      <dt>Pool de liquidez</dt><dd>O pote de moedas de uma DEX, abastecido pelos provedores de liquidez, que recebem a maior parte das taxas das trocas.<sup><a href="#f21">[21]</a></sup></dd>
+      <dt>Prova de fraude</dt><dd>A contestação de um rollup otimista: a disputa vai sendo dividida até achar o ponto exato do erro.<sup><a href="#f11">[11]</a></sup></dd>
+      <dt>Prova de validade</dt><dd>Prova matemática curta, entregue a cada lote pelos rollups de conhecimento zero, de que as contas foram feitas certo.<sup><a href="#f12">[12]</a></sup></dd>
+      <dt>Rollup</dt><dd>Camada 2 que junta muitas transações e publica na rede principal os dados compactados e o resultado.<sup><a href="#f10">[10]</a></sup></dd>
+      <dt>Sequenciador</dt><dd>Quem decide a ordem das transações num rollup e envia os lotes para o Ethereum.<sup><a href="#f11">[11]</a></sup></dd>
+      <dt>Stablecoin</dt><dd>Token feito para acompanhar o valor de outro ativo, em geral o dólar.<sup><a href="#f28">[28]</a></sup></dd>
+      <dt>Tokenização</dt><dd>Registrar numa blockchain a posse de algo que existe fora dela, como um título, uma ação ou um imóvel.<sup><a href="#f17">[17]</a></sup></dd>
+    </dl>
+  </section>
+
+  <section id="fontes">
+    <h2><small>Fontes</small>De onde vem cada informação</h2>
+    <p class="fonte">Consultas em 16/11/2026, salvo outra data indicada. Números são retratos da data da consulta e mudam.</p>
+    <ol class="fontes">
+      <li id="f1">EIP-20, padrão de tokens ERC-20: <a href="https://eips.ethereum.org/EIPS/eip-20">eips.ethereum.org/EIPS/eip-20</a></li>
+      <li id="f2">EIP-2612, permit: <a href="https://eips.ethereum.org/EIPS/eip-2612">eips.ethereum.org/EIPS/eip-2612</a></li>
+      <li id="f3">ethereum.org, Como revogar o acesso de contratos inteligentes aos seus fundos (consulta em 20/11/2026): <a href="https://ethereum.org/pt-br/guides/how-to-revoke-token-access/">ethereum.org/pt-br/guides/how-to-revoke-token-access</a></li>
+      <li id="f4">ethereum.org, Segurança no Ethereum e prevenção de golpes (consulta em 20/11/2026): <a href="https://ethereum.org/pt-br/security/">ethereum.org/pt-br/security</a></li>
+      <li id="f5">ethereum.org, Fui vítima de golpe ou perdi fundos (consulta em 20/11/2026): <a href="https://ethereum.org/pt-br/community/support/scams/">ethereum.org/pt-br/community/support/scams</a></li>
+      <li id="f6">ethereum.org, Introdução aos dapps: <a href="https://ethereum.org/pt-br/developers/docs/dapps/">ethereum.org/pt-br/developers/docs/dapps</a></li>
+      <li id="f7">The Block, caso Across (11/11/2026): <a href="https://www.theblock.co/news/defi/2026-11-11-crosschain-protocol-across-restores-systems-after-domain-hijack-437843">theblock.co</a>; crypto.news, caso Across (11/11/2026): <a href="https://crypto.news/across-protocol-domain-hijack-phishing-350k-losses/">crypto.news</a></li>
+      <li id="f8">Scam Sniffer, relatório de phishing de 2025 (03/01/2026): <a href="https://drops.scamsniffer.io/scam-sniffer-2025-crypto-phishing-losses-fall-83-to-84-million/">drops.scamsniffer.io</a></li>
+      <li id="f9">ethereum.org, Camada 2: <a href="https://ethereum.org/pt-br/layer-2/">ethereum.org/pt-br/layer-2</a></li>
+      <li id="f10">ethereum.org, Learn about layer 2: <a href="https://ethereum.org/en/layer-2/learn/">ethereum.org/en/layer-2/learn</a></li>
+      <li id="f11">ethereum.org, Rollups otimistas: <a href="https://ethereum.org/pt-br/developers/docs/scaling/optimistic-rollups/">ethereum.org/pt-br/developers/docs/scaling/optimistic-rollups</a></li>
+      <li id="f12">ethereum.org, Zero-knowledge rollups: <a href="https://ethereum.org/en/developers/docs/scaling/zk-rollups/">ethereum.org/en/developers/docs/scaling/zk-rollups</a></li>
+      <li id="f13">ETHBEAT, The Stages Framework: <a href="https://ethbeat.org/stages">ethbeat.org/stages</a></li>
+      <li id="f14">ETHBEAT, resumo das camadas 2, aba Rollups: <a href="https://ethbeat.org/layer2s/summary">ethbeat.org/layer2s/summary</a></li>
+      <li id="f15">ETHBEAT, FAQ: <a href="https://ethbeat.org/faq">ethbeat.org/faq</a></li>
+      <li id="f16">ETHBEAT, análise de risco: <a href="https://ethbeat.org/layer2s/risk">ethbeat.org/layer2s/risk</a></li>
+      <li id="f17">ethereum.org, O que são ativos do mundo real (RWAs)?: <a href="https://ethereum.org/pt-br/real-world-assets/">ethereum.org/pt-br/real-world-assets</a></li>
+      <li id="f18">rwa.xyz Docs, Tokenization Type (Distributed e Represented): <a href="https://docs.rwa.xyz/frameworks/tokenization-type">docs.rwa.xyz/frameworks/tokenization-type</a></li>
+      <li id="f19">IOSCO, Tokenization of Financial Assets, relatório final FR/17/25 (nov/2025), p. 17 e 27 a 29: <a href="https://www.iosco.org/library/pubdocs/pdf/IOSCOPD809.pdf">iosco.org</a></li>
+      <li id="f20">BlackRock, lançamento do fundo tokenizado BUIDL (comunicado de 20/03/2024, via Nasdaq): <a href="https://www.nasdaq.com/press-release/blackrock-launches-its-first-tokenized-fund-buidl-on-the-ethereum-network-2024-03-20">nasdaq.com</a></li>
+      <li id="f21">Uniswap, central de ajuda sobre aprovação: <a href="https://support.uniswap.org/hc/en-us/articles/8120520483085-What-is-an-approval-transaction">support.uniswap.org</a>; Uniswap Developers, How Uniswap Works e Fees (consulta em 15/11/2026): <a href="https://developers.uniswap.org/docs/get-started/concepts/how-uniswap-works">developers.uniswap.org/…/how-uniswap-works</a>; <a href="https://developers.uniswap.org/docs/get-started/concepts/fees">developers.uniswap.org/…/fees</a></li>
+      <li id="f22">ethereum.org, Carteiras Ethereum e Contas Ethereum (consulta em 15/11/2026): <a href="https://ethereum.org/pt-br/wallets/">ethereum.org/pt-br/wallets</a>; <a href="https://ethereum.org/pt-br/developers/docs/accounts/">ethereum.org/pt-br/developers/docs/accounts</a></li>
+      <li id="f23">MetaMask, dicas básicas de segurança (consulta em 20/11/2026): <a href="https://support.metamask.io/pt-br/stay-safe/safety-in-web3/basic-safety-and-security-tips-for-metamask/">support.metamask.io</a></li>
+      <li id="f24">ethereum.org, Danksharding: <a href="https://ethereum.org/en/roadmap/danksharding/">ethereum.org/en/roadmap/danksharding</a>; ethereum.org, História do Ethereum: <a href="https://ethereum.org/en/history/">ethereum.org/en/history</a></li>
+      <li id="f25">ethereum.org, Introdução ao Ethereum: <a href="https://ethereum.org/pt-br/developers/docs/intro-to-ethereum/">ethereum.org/pt-br/developers/docs/intro-to-ethereum</a></li>
+      <li id="f26">ethereum.org, Contratos inteligentes: <a href="https://ethereum.org/pt-br/smart-contracts/">ethereum.org/pt-br/smart-contracts</a></li>
+      <li id="f27">ethereum.org, Gás e taxas (consulta em 15/11/2026): <a href="https://ethereum.org/pt-br/developers/docs/gas/">ethereum.org/pt-br/developers/docs/gas</a></li>
+      <li id="f28">ethereum.org, Stablecoins (consulta em 15/11/2026): <a href="https://ethereum.org/pt-br/stablecoins/">ethereum.org/pt-br/stablecoins</a></li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Chave Pública</b> · DeFi explicado, do zero. Canal no YouTube: <a href="https://www.youtube.com/@chavepublicadefi">@chavepublicadefi</a>.</p>
+    <p>Conteúdo educativo. Não é recomendação de investimento. Material gratuito, sem patrocínio, sem venda e sem link de afiliado.</p>
+    <p>Textos do estúdio, escritos com apoio de IA e conferidos nas fontes listadas. Encontrou um erro? Comente no vídeo relacionado e a gente corrige com a data da correção.</p>
+  </div>
+</footer>
+</body>
+</html>
